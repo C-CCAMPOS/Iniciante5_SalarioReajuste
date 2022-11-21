@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Iniciante5_SalarioReajuste
 {
@@ -17,6 +13,8 @@ namespace Iniciante5_SalarioReajuste
             int qtdFuncionarios = 0;
             double salario = 0;
             int i = 0;
+            int reaj = 0;
+            double salReaj = 0;
 
             Console.Write("\n\n\n\nDigite o número de funcionários que deseja calcular: ");
             qtdFuncionarios = Convert.ToInt32(Console.ReadLine());
@@ -25,9 +23,30 @@ namespace Iniciante5_SalarioReajuste
             while (i < qtdFuncionarios)
             {
                 i++;
-                Console.Write("Digite o salário do funcionário " + i + ": ");
+                Console.Write("Digite o salário do funcionário " + i + ": R$ ");
                 salario = Convert.ToDouble(Console.ReadLine());
+
+                if (salario <= 300)
+                {
+                    reaj++;
+
+                    salReaj = ((salario * 50) / 100);
+                    salReaj = salReaj + salario;
+
+                    Console.WriteLine(" \nValor reajustado para: R$ " + salReaj);
+                }
+                else
+                {
+                    salReaj = ((salario * 30) / 100);
+                    salReaj = salReaj + salario;
+
+                    Console.WriteLine(" \nValor reajustado para: R$ " + salReaj);
+                }
+                Console.WriteLine("*******************************************************************\n");
+
+
             }
+
 
 
 
