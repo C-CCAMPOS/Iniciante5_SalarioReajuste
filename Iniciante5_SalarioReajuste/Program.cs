@@ -20,10 +20,11 @@ namespace Iniciante5_SalarioReajuste
 
             Console.Write("\n\n\n\nDigite o número de funcionários que deseja calcular: ");
             qtdFuncionarios = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("*******************************************************************\n\n\n");
 
-            while (qtdFuncionarios <= 10)
+            while (i < qtdFuncionarios)
             {
-                i = i++;
+                i++;
                 Console.Write("Digite o salário do funcionário " + i + ": ");
                 salario = Convert.ToDouble(Console.ReadLine());
             }
